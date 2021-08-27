@@ -37,7 +37,7 @@ class TrendingNow extends Component {
   render() {
     return (
       <>
-        <Container className="container-fluid ">
+        <Container className="container-fluid">
         <h5 className="text-left">Trending Now - Harry Potter</h5>
 
           <Row>
