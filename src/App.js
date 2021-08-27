@@ -1,14 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
 import './App.css';
-import MyNav from './components/MyNav';
-
+import TrendingNow from './components/TrendingNow';
 
 function App() {
   return (
     <div className="App">
-        <MyNav/>
+        <TrendingNow/>
     </div>
   );
 }
