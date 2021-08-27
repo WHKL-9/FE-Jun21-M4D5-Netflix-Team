@@ -38,7 +38,7 @@ class TrendingNow extends Component {
     return (
       <>
         <Container className="container-fluid ">
-        <h5 className="text-left">Trending Now - Harry Potter</h5>
+        <h5 className="text-left text-white mb-2" >Trending Now - Harry Potter</h5>
 
           <Row>
             {this.state.isLoading && <Loading />}
