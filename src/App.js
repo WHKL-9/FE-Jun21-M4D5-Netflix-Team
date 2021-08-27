@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <MyNav/>
       <MyFooter/>
-      <TrendingNow/>
+      {/* <TrendingNow/> */}
     </div>
   
   )};
