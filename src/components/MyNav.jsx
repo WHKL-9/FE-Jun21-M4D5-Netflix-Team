@@ -26,21 +26,23 @@ export default function MyNav() {
         <Nav.Link href="#pricing">Recently Added</Nav.Link>
         <Nav.Link href="#pricing">My List</Nav.Link>
       </Nav>
-      <Nav>
-        <Form inline>
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-          <Button variant="outline-info">Search</Button>
-        </Form>
-        <Nav.Link href="#deets">Kids</Nav.Link>
-        <Nav.Link eventKey={2} href="#memes">
-          <DropdownButton className="bg-dark user-button" title="User">
-            <Dropdown.ItemText>Your Account</Dropdown.ItemText>
-            <Dropdown.Item as="button">Profile</Dropdown.Item>
-            <Dropdown.Item as="button">Help</Dropdown.Item>
-            <Dropdown.Item as="button">Contact Us</Dropdown.Item>
-          </DropdownButton>
-        </Nav.Link>
-      </Nav>
+      <div><Nav>
+          
+          <Form inline>
+            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+            <Button variant="outline-info">Search</Button>
+          </Form>
+          <Nav.Link href="#deets" className = "mt-2">Kids</Nav.Link>
+          <Nav.Link eventKey={2} href="#memes">
+            <DropdownButton className="bg-dark user-button" title="User">
+              <Dropdown.ItemText>Your Account</Dropdown.ItemText>
+              <Dropdown.Item as="button">Profile</Dropdown.Item>
+              <Dropdown.Item as="button">Help</Dropdown.Item>
+              <Dropdown.Item as="button">Contact Us</Dropdown.Item>
+            </DropdownButton>
+          </Nav.Link>
+        </Nav></div>
+      
       </Navbar>
 
   );
