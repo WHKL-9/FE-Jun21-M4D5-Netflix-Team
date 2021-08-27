@@ -5,7 +5,9 @@ user-button {
 a {
   color: gray;
 }
-.footer {
-  width: 100%;
-  bottom: 0px;
+* {
+  background-color: black;
+}
+nav.nav.navbar {
+  background-color: black;
 }
