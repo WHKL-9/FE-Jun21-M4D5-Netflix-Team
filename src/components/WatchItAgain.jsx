@@ -12,7 +12,7 @@ class WatchItAgain extends Component {
   getMovies = async () => {
     try {
       const response = await fetch(
-        "http://www.omdbapi.com/?i=tt3896198&apikey=55818844&s=",
+        "http://www.omdbapi.com/?i=tt3896198&apikey=55818844&s=harry%20potter",
         {
           method: "GET",
         }

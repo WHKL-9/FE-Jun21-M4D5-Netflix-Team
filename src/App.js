@@ -12,7 +12,7 @@ function App() {
       <TrendingNow/>
       <WatchItAgain/>
 
-      <MyFooter/>
+      
     </div>
   
   )};
