@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar,Nav,Button,Form,FormControl,Dropdown,ButtonGroup,DropdownButton } from 'react-bootstrap'
+import { Navbar,Nav,Button,Form,FormControl,Dropdown,DropdownButton } from 'react-bootstrap'
 import netflixlogo from "../images/logo.png"
 import './MyNav.css'
 
@@ -8,7 +8,7 @@ export default function MyNav(){
 
 
     return <Navbar bg="dark" variant="dark">
-    <Navbar.Brand href="#home"><img src={netflixlogo} alt="logo" srcset="" id="netflixlogo"/></Navbar.Brand>
+    <Navbar.Brand href="#home"><img src={netflixlogo} alt="logo" srcSet="" id="netflixlogo"/></Navbar.Brand>
     <Nav className="mr-auto">
       <Nav.Link href="#home">Home</Nav.Link>
       <Nav.Link href="#features">Tv Shows</Nav.Link>

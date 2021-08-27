@@ -1,47 +1,54 @@
-import {Container, Row, Col} from 'react-bootstrap'
-import {Component} from 'react'
-import MovieList from './MovieList'
+import { Container, Row } from "react-bootstrap";
+import { Component } from "react";
+import MovieList from "./MovieList";
+import Loading from "./Loading";
 
-class TrendingNow extends Component{
-    state = {
-        movies: []//movies will come here
-    }
+class TrendingNow extends Component {
+  state = {
+    movies: [], //movies will come here
+    isLoading: true,
+  };
 
-    getMovies = async() => {
-        try {
-            const response = await fetch("http://www.omdbapi.com/?i=tt3896198&apikey=55818844&s=harry%20potter",{
-                method: "GET",
-
-            })
-            if (response.ok){
-                const movies = await response.json()
-                this.setState({movies})
-                console.log(this.state.movies.Search)
-            } else{
-                alert("Some error happened. No movies fetched")
-            }
-        } catch (error) {
-            console.log(error)
+  getMovies = async () => {
+    try {
+      const response = await fetch(
+        "http://www.omdbapi.com/?i=tt3896198&apikey=55818844&s=harry%20potter",
+        {
+          method: "GET",
         }
+      );
+      if (response.ok) {
+        const movies = await response.json();
+        this.setState({ movies: movies.Search, isLoading: false });
+      } else {
+        alert("Some error happened. No movies fetched");
+        this.setState({ isLoading: false });
+      }
+    } catch (error) {
+      console.log(error);
+      this.setState({ isLoading: false });
     }
+  };
 
-    componentDidMount=async() =>{
-        await this.getMovies()
-    }
+  componentDidMount() {
+    this.getMovies();
+  }
 
-    render(){
-        return (
-            <>
-            <h5 className="text-left ml-5">Trending Now - Harry Potter</h5>
-            <Container className="container-fluid">
-                <Row>
-                    <MovieList movies = {this.state.movies.Search}/>
-                </Row>
-            </Container>
-            </>
-        )
-    }
+  render() {
+    return (
+      <>
+        <Container className="container-fluid ">
+        <h5 className="text-left">Trending Now - Harry Potter</h5>
+
+          <Row>
+            {this.state.isLoading && <Loading />}
+            {!this.state.isLoading &&
+              this.state.movies.map((movie) => <MovieList movie={movie} />)}
+          </Row>
+        </Container>
+      </>
+    );
+  }
 }
 
-export default TrendingNow
-
+export default TrendingNow;
