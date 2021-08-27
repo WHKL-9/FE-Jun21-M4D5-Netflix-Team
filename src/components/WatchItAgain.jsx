@@ -38,7 +38,7 @@ class WatchItAgain extends Component {
     return (
       <>
         <Container className="container-fluid ">
-        <h5 className="text-left text-white mt-2">Watch It Again</h5>
+        <h5 className="text-left text-white mt-4">Watch It Again</h5>
 
           <Row>
             {this.state.isLoading && <Loading />}

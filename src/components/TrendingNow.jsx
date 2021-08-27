@@ -40,7 +40,7 @@ class TrendingNow extends Component {
 
         <Container className="container-fluid ">
         <h5 className="text-left text-white mb-2" >Trending Now - Harry Potter</h5>
-=======
+
         
 
           <Row>
