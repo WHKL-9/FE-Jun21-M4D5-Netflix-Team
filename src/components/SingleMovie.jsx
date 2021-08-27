@@ -1,16 +1,9 @@
-import {Card} from 'react-bootstrap'
+import { Card } from "react-bootstrap";
 
+const SingleMovie = ({ movie }) => (
+  <Card >
+    <Card.Img src={movie.Poster} style={{height: "12rem"}} />
+  </Card>
+);
 
-const SingleMovie = ({movie}) =>(
-        <Card style={{ width: '18rem'}}>
-        <Card.Img src={movie.Poster} />
-        </Card>
-)
-   
-
-export default SingleMovie
-
-
-
-
-
+export default SingleMovie;
