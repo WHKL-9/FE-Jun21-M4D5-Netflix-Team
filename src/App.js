@@ -11,9 +11,11 @@ function App() {
   return (
     <div className="App">
       <MyNav/>
-      <TrendingNow/>
+      <TrendingNow  title="Matrix"/>
+      <TrendingNow  title="star wars"/>
+      <TrendingNow  title="harry potter"/>
 
-      <WatchItAgain/>
+     {/* <WatchItAgain/> */}
      {/*<MyFooter/>*/} 
 
 
