@@ -12,7 +12,7 @@ class WatchItAgain extends Component {
   getMovies = async () => {
     try {
       const response = await fetch(
-        "http://www.omdbapi.com/?i=tt3896198&apikey=55818844&s=harry%20potter",
+        "http://www.omdbapi.com/?i=tt3896198&apikey=55818844&s=Matrix",
         {
           method: "GET",
         }
@@ -38,7 +38,7 @@ class WatchItAgain extends Component {
     return (
       <>
         <Container className="container-fluid ">
-        <h5 className="text-left text-white mt-4">Watch It Again</h5>
+        <h5 className="text-left text-white mt-4">Watch It Again - Matrix</h5>
 
           <Row>
             {this.state.isLoading && <Loading />}
