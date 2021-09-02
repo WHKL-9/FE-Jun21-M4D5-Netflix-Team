@@ -1,5 +1,5 @@
 import { Card, Button, Modal } from "react-bootstrap";
-
+import React from "react";
 const MovieComment = (movie) => (
   <Modal.Dialog key={movie.imdbID}>
     <Modal.Header closeButton>

@@ -4,7 +4,7 @@ import MovieList from "./MovieList";
 import Loading from "./Loading";
 import { Search } from "react-bootstrap-icons";
 
-class TrendingNow extends Component {
+class Home extends Component {
   state = {
     movies: [], //movies will come here
     isLoading: true,
@@ -52,7 +52,7 @@ class TrendingNow extends Component {
           <Row>
             {this.state.isLoading && <Loading />}
             {!this.state.isLoading &&
-              this.state.movies.map((movie) => <MovieList movie={movie} />)}
+              this.state.movies.search.map((movie) => <MovieList movie={movie} />)}
           </Row>
         </Container>
       </>
@@ -60,4 +60,4 @@ class TrendingNow extends Component {
   }
 }
 
-export default TrendingNow;
+export default Home;
